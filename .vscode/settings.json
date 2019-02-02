@@ -1,0 +1,10 @@
+{
+    "git.ignoreLimitWarning": true,
+    "files.associations": {
+        "stdio.h": "c",
+        "lista.h": "c",
+        "tabelasimbolos.h": "c",
+        "erro.h": "c",
+        "memoria.h": "c"
+    }
+}

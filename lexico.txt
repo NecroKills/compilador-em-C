@@ -1,0 +1,6 @@
+main(){
+    integer $inter = 90;
+    $inter = 10;
+    $oi = 1;
+    float $ererf = 7;
+}

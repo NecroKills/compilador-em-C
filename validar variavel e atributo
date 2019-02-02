@@ -1,0 +1,48 @@
+if (strcmp(palavra, palavraReservada[1]) == 0) /*function*/
+{
+    validaFunction = 1;
+    i = 9;
+    indexFunction = 0;
+    memset(function, '\0', sizeof(function));
+    while ((int)linha[i] != 0)
+    {
+        asciiLetter = (int)linha[i];
+        if ((asciiLetter != espaco) &&
+            (asciiLetter != abreParentese) &&
+            (asciiLetter != fechaParentese) &&
+            (asciiLetter != pontoEvirgula))
+        {
+            function[indexFunction] = linha[i];
+            indexFunction++;
+        }
+        else
+        {
+            if (function[0] == '!')
+            {
+                for (k = 1; (int)function[k] != 0; k++)
+                {
+                    if (function[k] >= 'a' && function[k] <= 'z' || function[k] >= 'A' && function[k] <= 'Z' || function[k] >= '0' && function[k] <= '9')
+                    {
+                    }
+                    else
+                    {
+                        erro(4, numeroLinha);
+                    }
+                }
+            }
+            else
+            {
+                erro(3, numeroLinha);
+            }
+            indexFunction = 0;
+            strcpy(escopo, function);
+            memset(function, '\0', sizeof(function));
+            break;
+        }
+        i++;
+    }
+}
+else
+{
+    erro(5, numeroLinha);
+}
